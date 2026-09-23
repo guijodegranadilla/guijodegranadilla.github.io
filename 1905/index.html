@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0c0b09">
+<link rel="icon" href="data:,">
+<title>Archivo 01 · El Documental</title>
+<style>
+:root{
+--negro:#0c0b09; --papel:#15140f; --borde:#2a2820;
+--texto:#ece6d8; --tenue:#8f887a; --debil:#a39b8a; --caja:#6e6757;
+--oro:#c9a34e; --rojo:#cf7f6d;
+--serif:"Times New Roman", Times, "Liberation Serif", Tinos, "Noto Serif", serif;
+--sans:Helvetica, "Helvetica Neue", Arial, "Liberation Sans", Roboto, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+margin:0; min-height:100dvh; background:var(--negro); color:var(--texto);
+font-family:var(--serif); font-size:19px; line-height:1.62;
+display:flex; justify-content:center; align-items:center;
+padding:34px 22px 56px;
+padding:max(34px,env(safe-area-inset-top)) 22px
+max(56px,env(safe-area-inset-bottom));
+position:relative; overflow-x:hidden;
+}
+body::before{
+content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+background:radial-gradient(ellipse 120% 80% at 50% 0%, rgba(201,163,78,.07), transparent 60%),
+radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,0,0,.55), transparent 70%);
+}
+body::after{
+content:""; position:fixed; inset:-50%; pointer-events:none; z-index:0; opacity:.035;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+animation:grano 1.1s steps(3) infinite;
+}
+@keyframes grano{
+0%{transform:translate(0,0)} 33%{transform:translate(-3%,2%)} 66%{transform:translate(2%,-3%)}
+}
+main{width:100%; max-width:33rem; position:relative; z-index:1}
+.sello{
+font-family:var(--sans); font-size:11px; letter-spacing:.26em;
+text-transform:uppercase; color:var(--oro); display:flex;
+align-items:center; gap:13px; margin-bottom:34px;
+}
+.sello::after{content:""; flex:1; height:1px; background:linear-gradient(90deg,var(--borde),transparent)}
+h1{font-size:2.6rem; line-height:1.08; font-weight:500; margin:0 0 18px; letter-spacing:-.015em}
+.entradilla{color:var(--tenue); margin:0 0 20px}
+.entradilla em{color:var(--texto); font-style:italic}
+hr{border:0; border-top:1px solid var(--borde); margin:34px 0}
+label.et{
+display:block; font-family:var(--sans); font-size:12.5px; letter-spacing:.14em;
+text-transform:uppercase; color:var(--debil); margin-bottom:8px;
+}
+.campo{margin-bottom:20px}
+input[type=text]{
+width:100%; padding:14px 15px; background:var(--papel);
+border:1px solid var(--caja); border-radius:4px; color:var(--texto);
+font-family:var(--sans); font-size:18px; transition:border-color .18s, background .18s;
+}
+input[type=text]::placeholder{color:#8a8373; opacity:1}
+input[type=text]:focus{outline:none; border-color:var(--oro); background:#191710}
+input[type=text].mal{border-color:var(--rojo)}
+input[type=text].duda{border-color:var(--oro)}
+button{
+width:100%; margin-top:12px; padding:16px; background:var(--oro); color:#16130a;
+border:0; border-radius:4px; font-family:var(--sans); font-size:17px;
+font-weight:500; letter-spacing:.01em; cursor:pointer;
+transition:opacity .18s, transform .08s;
+}
+button:hover:not(:disabled){opacity:.9}
+button:active:not(:disabled){transform:translateY(1px)}
+button:disabled{opacity:.4; cursor:default}
+.trampa{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+.error{color:var(--rojo); font-size:15px; margin-top:15px; min-height:1.2em}
+.error.suave{color:var(--oro)}
+.pie{
+font-family:var(--sans); font-size:10.5px; letter-spacing:.16em;
+text-transform:uppercase; color:var(--debil); margin:0;
+}
+.sinjs{
+margin-top:26px; padding:15px 16px; border:1px solid var(--rojo);
+border-radius:4px; color:var(--rojo); font-size:15px;
+}
+a{color:var(--oro); text-decoration-thickness:1px; text-underline-offset:3px}
+.aparece{animation:sube .55s cubic-bezier(.2,.7,.3,1) both}
+@keyframes sube{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){
+body::after{animation:none}
+.aparece{animation:none}
+*{transition:none !important}
+}
+@media (max-width:380px){ h1{font-size:2.1rem} body{font-size:18px} }
+</style>
+</head>
+<body>
+<main>
+<div class="sello">Archivo 01 de 04</div>
+<section id="formulario" class="aparece">
+<h1>La romería</h1>
+<p class="entradilla">
+Has encontrado uno de los 4 códigos escondidos en el documental.
+Detrás hay un vídeo que no cabía en el montaje.
+</p>
+<p class="entradilla">
+Dime quién eres para saber que lo has encontrado.
+</p>
+<hr>
+<form id="f" novalidate>
+<div class="campo">
+<label class="et" for="nombre">Nombre</label>
+<input type="text" id="nombre" maxlength="60" autocomplete="given-name"
+autocapitalize="words" enterkeyhint="next">
+</div>
+<div class="campo">
+<label class="et" for="apellidos">Apellidos</label>
+<input type="text" id="apellidos" maxlength="80" autocomplete="family-name"
+autocapitalize="words" enterkeyhint="next">
+</div>
+<div class="campo">
+<label class="et" for="localidad">Localidad</label>
+<input type="text" id="localidad" maxlength="60" autocomplete="address-level2"
+autocapitalize="words" enterkeyhint="go" placeholder="De dónde eres">
+</div>
+<div class="trampa" aria-hidden="true">
+<label for="web">No rellenar</label>
+<input type="text" id="web" tabindex="-1" autocomplete="off">
+</div>
+<button type="submit" id="enviar">Ver el vídeo</button>
+<div class="error" id="error" role="alert"></div>
+</form>
+<noscript>
+<p class="sinjs">Este archivo necesita JavaScript activado. Abre la página en
+otro navegador o desactiva el modo de ahorro de datos.</p>
+</noscript>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var CODIGO = "1905", API = "https://documental-qr.guijodegranadilla.workers.dev", TOTAL = 4;
+var cargada = Date.now();
+var $ = function(id){ return document.getElementById(id); };
+var f = $("f"), boton = $("enviar"), error = $("error");
+var confirmado = false;
+function fallo(msg, campo){
+error.className = "error";
+error.textContent = msg;
+boton.disabled = false;
+boton.textContent = "Ver el vídeo";
+if (campo) { campo.classList.add("mal"); campo.focus(); }
+try { error.scrollIntoView({ block: "center", behavior: "smooth" }); } catch (e) {}
+}
+var ETIQUETA = { nombre:"el nombre", apellidos:"los apellidos", localidad:"la localidad" };
+function dudar(campos){
+confirmado = true;
+campos.forEach(function(id){ $(id).classList.add("duda"); });
+var partes = campos.map(function(c){ return ETIQUETA[c]; });
+var lista = partes.length > 1
+? partes.slice(0, -1).join(", ") + " y " + partes[partes.length - 1]
+: partes[0];
+error.className = "error suave";
+error.textContent = "Revisa " + lista + ". Si está todo bien, pulsa otra vez.";
+boton.disabled = false;
+boton.textContent = "Está todo bien";
+try { error.scrollIntoView({ block: "center", behavior: "smooth" }); } catch (e) {}
+}
+["nombre","apellidos"].forEach(function(id, i){
+$(id).addEventListener("keydown", function(e){
+if (e.key === "Enter" || e.keyCode === 13){ e.preventDefault(); $(["apellidos","localidad"][i]).focus(); }
+});
+});
+[ "nombre","apellidos","localidad" ].forEach(function(id){
+$(id).addEventListener("input", function(){
+this.classList.remove("mal");
+if (confirmado){
+confirmado = false;
+["nombre","apellidos","localidad"].forEach(function(c){ $(c).classList.remove("duda"); });
+boton.textContent = "Ver el vídeo";
+}
+error.textContent = "";
+});
+});
+function incrustar(u){
+u = String(u);
+var yt = u.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/);
+return { directo: yt ? "https://www.youtube.com/watch?v=" + yt[1] : u };
+}
+f.addEventListener("submit", function(ev){
+ev.preventDefault();
+error.textContent = "";
+var campos = { nombre:$("nombre"), apellidos:$("apellidos"), localidad:$("localidad") };
+for (var k in campos){
+if (!campos[k].value.trim()){
+return fallo("Rellena los tres campos.", campos[k]);
+}
+}
+boton.disabled = true;
+boton.textContent = "Abriendo…";
+var x = new XMLHttpRequest();
+x.open("POST", API, true);
+x.setRequestHeader("Content-Type", "application/json");
+x.timeout = 15000;
+x.onload = function(){
+var d = {};
+try { d = JSON.parse(x.responseText) || {}; } catch (e) {}
+var ok = x.status >= 200 && x.status < 300;
+if (ok && d.video) return irAYoutube(d.video);
+if (d.dudoso && d.dudoso.length) return dudar(d.dudoso);
+if (d.pendiente) return fallo("Este vídeo todavía no está disponible. Vuelve a probar dentro de unos días.");
+if (ok) return fallo("Recarga la página e inténtalo otra vez.");
+fallo("No se ha podido abrir el vídeo. Inténtalo otra vez en un momento.");
+};
+x.ontimeout = function(){ fallo("La conexión va muy lenta. Inténtalo otra vez."); };
+x.onerror = function(){ fallo("Sin conexión. Comprueba la red e inténtalo otra vez."); };
+x.send(JSON.stringify({
+codigo: CODIGO,
+nombre: campos.nombre.value.trim(),
+apellidos: campos.apellidos.value.trim(),
+localidad: campos.localidad.value.trim(),
+web: $("web").value,
+t: cargada,
+confirmado: confirmado
+}));
+});
+window.addEventListener("pageshow", function(){
+boton.disabled = false;
+boton.textContent = "Ver el vídeo";
+error.textContent = "";
+confirmado = false;
+["nombre","apellidos","localidad"].forEach(function(c){ $(c).classList.remove("duda"); });
+});
+function irAYoutube(video){
+window.location.href = incrustar(video).directo;
+}
+})();
+</script>
+</body>
+</html>
